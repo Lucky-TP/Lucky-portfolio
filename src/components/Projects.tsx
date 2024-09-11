@@ -1,7 +1,9 @@
 "use client";
-import { Timeline } from "antd";
+import { Timeline, Typography } from "antd";
 import { useState } from "react";
 import { useScreenWidthSize } from "./hooks/useScreenWidthSize";
+
+const { Title } = Typography;
 
 export default function Projects() {
   const screenWidth = useScreenWidthSize();
@@ -54,7 +56,7 @@ export default function Projects() {
 
   return (
     <section className="container mx-auto px-6 py-10" id="projects">
-      <h2 className="mb-6 text-center text-3xl font-bold">Technical Projects / Experience</h2>
+      <Title level={2} className="mb-6 text-center">Technical Projects / Experience</Title>
       <Timeline mode="alternate">
         {projects.map((project, index) => (
           <Timeline.Item key={index}>

@@ -32,7 +32,7 @@ const educationItems = [
 
 export default function Education() {
   return (
-    <section className="container mx-auto px-6 py-10" id="education">
+    <section className="px-6 py-10" id="education">
       <Title level={2} className="mb-6 text-center">
         Education
       </Title>

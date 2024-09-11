@@ -30,7 +30,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section className="container mx-auto px-6 py-10" id="skills">
+    <section className="px-6 py-10" id="skills">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}

@@ -11,7 +11,7 @@
   flex-direction: column;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 900px) {
   .ant-card-head-wrapper {
     flex-direction: row;
   }
