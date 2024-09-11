@@ -27,6 +27,7 @@ export default function Intro() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="flex flex-col gap-6"
         >
           <div className="flex flex-col items-center gap-2 sm:items-start">
