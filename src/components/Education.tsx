@@ -15,7 +15,7 @@ const educationItems = [
     gpa: "",
     location: "Nevada, USA",
     description:
-      "Participated in an exchange program, during which I completed a coding class that provided a foundational understanding of programming.",
+      `• Participated in an exchange program, during which I completed a coding class that provided a foundational understanding of programming.\n• GPA: 3.97/4.00`,
     website: "https://lcsdnv.com/lincoln-county-h-s/",
   },
   {
@@ -25,7 +25,7 @@ const educationItems = [
     period: "June 2022 - Present",
     gpa: "3.42/4.00",
     location: "Bangkok, Thailand",
-    description: `Currently a third-year student studying Bachelor of Engineering in Computer Engineering.\nExpected graduation in June 2026.\nGPA: 3.42/4.00`,
+    description: `• Currently a third-year student studying Bachelor of Engineering in Computer Engineering.\n• Expected graduation in June 2026.\n• GPA: 3.42/4.00`,
     website: "https://www.ku.ac.th/th",
   },
 ];

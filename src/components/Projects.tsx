@@ -41,7 +41,7 @@ export default function Projects() {
     {
       title: "Teacher Assistant at Kasetsart University",
       description:
-        "Taught Python programming to a class of 100 students, providing guidance and support during lab sessions and coursework assignments.",
+        "Provided guidance and support to students learning Python programming during lab sessions and coursework assignments, assisting a class of 100 students.",
       technologies: ["Python"],
       period: "November 2023 - Present",
     },
