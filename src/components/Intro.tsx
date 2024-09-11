@@ -30,8 +30,8 @@ export default function Intro() {
           className="flex flex-col gap-6"
         >
           <div className="flex flex-col items-center gap-2 sm:items-start">
-            <h1 className="text-4xl font-bold">👋 Hi, I'm Lucky</h1>
-            <h1 className="text-xl">
+            <h1 className="text-center text-4xl font-bold">👋 Hi, I'm Lucky</h1>
+            <h1 className="text-center text-xl">
               a Full-Stack Developer Interested in Technology, Finance, and Innovation
             </h1>
           </div>
@@ -40,7 +40,7 @@ export default function Intro() {
               href="https://drive.google.com/file/d/1lkD47ieBg4C4KmkPOTDuj5CqSVYwdkHQ/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex w-fit items-center justify-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
+              className="group flex w-fit items-center justify-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-center text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
             >
               Resume / CV <FileText />
             </a>

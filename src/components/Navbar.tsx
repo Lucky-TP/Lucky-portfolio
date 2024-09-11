@@ -48,6 +48,9 @@ export default function Navbar() {
           <Link href="#projects" onClick={toggleMenu} className="py-2">
             Projects
           </Link>
+          <Link href="#education" onClick={toggleMenu} className="py-2">
+            Education
+          </Link>
           <Link href="#skills" onClick={toggleMenu} className="py-2">
             Skills
           </Link>

@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.ant-card-head {
+  padding: 16px 24px !important;
+}
+
+.ant-card-head-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 640px) {
+  .ant-card-head-wrapper {
+    flex-direction: row;
+  }
+}
+
+.ant-card-extra {
+  margin-inline-start: unset !important;
+}
