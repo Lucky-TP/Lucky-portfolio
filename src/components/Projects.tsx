@@ -11,7 +11,7 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "Kasetsart Alumni Mentorship Program",
+      title: "Kasetsart Alumni Mentorship Program Website",
       description:
         "Developed a website that announces program details, facilitates registration, and displays individuals who have passed the qualification criteria, with data managed through AWS S3. Implemented API routes to query qualification information from S3. Used NextJS, TypeScript, Tailwind CSS, ESLint, Prettier, and Framer Motion for development and animations. Deployed the application using Docker on a Kasetsart University virtual machine with a university domain.",
       technologies: ["NextJS", "TypeScript", "Tailwind CSS", "AWS S3", "Docker", "Framer Motion"],
@@ -19,6 +19,7 @@ export default function Projects() {
     },
     {
       title: "Sunday Insurance Internship",
+      website: "https://retail.easysunday.com/th",
       description:
         "As a Software Engineer Intern, developed a new design for the product card and built core user profile features, including sign-up, login, and order list pages, using NextJS for the front-end and ExpressJS, MongoDB, and PostgreSQL for the back-end. Created the foundation for a new service using NestJS. Gained experience with Gitflow, AWS, CI/CD deployment, teamwork, and startup work culture, including Agile and Scrum methodologies.",
       technologies: ["NextJS", "ExpressJS", "MongoDB", "PostgreSQL", "NestJS", "AWS"],
@@ -26,6 +27,7 @@ export default function Projects() {
     },
     {
       title: "Crowdfunding Platform",
+      website: "https://shark-wow.vercel.app/",
       description:
         "Developed a reward-based crowdfunding platform using NextJS, TypeScript, and Tailwind CSS for the front-end. Implemented Firebase for authentication and a NoSQL database for data storage. Integrated Stripe for payment processing, and set up ESLint and Prettier for code quality. Utilized Git for version control and team collaboration.",
       technologies: ["NextJS", "TypeScript", "Tailwind CSS", "Firebase", "Stripe", "Git"],
@@ -33,6 +35,7 @@ export default function Projects() {
     },
     {
       title: "Kasetsart University Document Submission for Club Budget",
+      website: "https://saku.sa.ku.ac.th/",
       description:
         "Developed responsive design features for a website at Kasetsart University, facilitating the shift from paper-based to online document submission for club budget withdrawals. Utilized NextJS along with front-end libraries such as Ant Design, Mantine, and Chakra UI to ensure a seamless user experience.",
       technologies: ["NextJS", "Ant Design", "Mantine", "Chakra UI"],
@@ -61,6 +64,14 @@ export default function Projects() {
         {projects.map((project, index) => (
           <Timeline.Item key={index}>
             <h3 className="text-xl font-semibold">{project.title}</h3>
+            <a
+              href={project.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className = "text-blue-400"
+            >
+              {project.website ? new URL(project.website).hostname : ""}
+            </a>
             <div
               className={`mt-2 text-gray-700 ${screenWidth < 768 && (expandedIndex === index ? "" : "hidden")}`}
             >
