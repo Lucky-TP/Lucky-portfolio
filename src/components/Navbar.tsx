@@ -12,7 +12,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="left-0 top-0 z-20 w-full bg-white shadow-md">
+    <nav className="sticky top-0 z-20 w-full bg-white shadow-md">
       <div className="container mx-auto flex items-center justify-between px-6 py-4">
         <div className="text-2xl font-bold">
           <Link href="#home">Lucky</Link>
@@ -37,10 +37,10 @@ export default function Navbar() {
       </div>
       {isOpen && (
         <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           exit={{ opacity: 0, height: 0 }}
-          className="flex flex-col items-center bg-white shadow-md md:hidden"
+          className="fixed top-16 left-0 w-full bg-white shadow-md md:hidden flex flex-col items-center justify-center h-auto"
         >
           <Link href="#home" onClick={toggleMenu} className="py-2">
             Home
