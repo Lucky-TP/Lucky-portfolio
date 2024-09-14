@@ -28,14 +28,13 @@ RUN npm ci --only=production
 COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/node_modules ./node_modules
-COPY --from=builder /app/next.config.js ./
 COPY --from=builder /app/package.json ./
 
 # Set environment variable for production
 ENV NODE_ENV=production
 
-# Expose port 4000
-EXPOSE 4000
+# Expose port 3000
+EXPOSE 3000
 
 # Start the application
 CMD ["npm", "start"]
