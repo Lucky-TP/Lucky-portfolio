@@ -23,7 +23,7 @@ const skills = [
   },
   {
     category: "Development Tools",
-    items: ["Firebase", "Git", "Jenkins", "AWS S3", "Docker", "Stripe"],
+    items: ["Firebase", "Git", "Jenkins", "AWS S3", "Docker", "Stripe", "Postman"],
     color: "#EC4899", // Pink for development tools
   },
 ];
