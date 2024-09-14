@@ -35,6 +35,7 @@ ENV NODE_ENV=production
 
 # Expose port 4000
 EXPOSE 4000
+ENV PORT 4000
 
 # Start the application
 CMD ["npm", "start"]
