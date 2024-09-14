@@ -11,7 +11,7 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "Kasetsart Alumni Mentorship Program Website",
+      title: "Kasetsart Alumni Mentorship Program with CPF (Website)",
       description:
         "Developed a website that announces program details, facilitates registration, and displays individuals who have passed the qualification criteria, with data managed through AWS S3. Implemented API routes to query qualification information from S3. Used NextJS, TypeScript, Tailwind CSS, ESLint, Prettier, and Framer Motion for development and animations. Deployed the application using Docker on a Kasetsart University virtual machine with a university domain.",
       technologies: ["NextJS", "TypeScript", "Tailwind CSS", "AWS S3", "Docker", "Framer Motion"],
