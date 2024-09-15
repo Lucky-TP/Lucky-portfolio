@@ -31,7 +31,11 @@ export default function Navbar() {
             Skills
           </Link>
         </div>
-        <button onClick={toggleMenu} className="block text-2xl focus:outline-none md:hidden" aria-label="Section Menu">
+        <button
+          onClick={toggleMenu}
+          className="block text-2xl focus:outline-none md:hidden"
+          aria-label="Section Menu"
+        >
           {isOpen ? <FiX /> : <FiMenu />}
         </button>
       </div>
@@ -40,7 +44,7 @@ export default function Navbar() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0, height: 0 }}
-          className="fixed top-16 left-0 w-full bg-white shadow-md md:hidden flex flex-col items-center justify-center h-auto"
+          className="fixed left-0 top-16 flex h-auto w-full flex-col items-center justify-center bg-white shadow-md md:hidden"
         >
           <Link href="#home" onClick={toggleMenu} className="py-2">
             Home

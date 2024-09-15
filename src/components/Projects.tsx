@@ -9,6 +9,7 @@ const { Title } = Typography;
 export default function Projects() {
   const screenWidth = useScreenWidthSize();
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+  const amount = screenWidth < 768 ? "some" : "all";
 
   const projects = [
     {
@@ -61,11 +62,13 @@ export default function Projects() {
   return (
     <section className="container mx-auto px-6 py-10" id="projects">
       <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: "all" }}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: amount }}
       >
-        <Title level={2} className="mb-6 text-center">Technical Projects / Experience</Title>
+        <Title level={2} className="mb-6 text-center">
+          Technical Projects / Experience
+        </Title>
       </motion.div>
       <Timeline mode="alternate">
         {projects.map((project, index) => (
@@ -73,7 +76,7 @@ export default function Projects() {
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: "all" }}
+              viewport={{ once: true, amount: amount }}
             >
               <h3 className="text-xl font-semibold">{project.title}</h3>
               {project.website && (
@@ -81,7 +84,7 @@ export default function Projects() {
                   href={project.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className = "text-blue-500 font-bold"
+                  className="font-bold text-blue-500"
                 >
                   {project.website ? new URL(project.website).hostname : ""}
                 </a>

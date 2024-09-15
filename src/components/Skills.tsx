@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Card, Col, Row, Typography } from "antd";
+import { useScreenWidthSize } from "./hooks/useScreenWidthSize";
 
 const { Title, Text } = Typography;
 
@@ -29,13 +30,15 @@ const skills = [
 ];
 
 export default function Skills() {
+  const screenWidth = useScreenWidthSize();
+  const amount = screenWidth < 768 ? "some" : "all";
   return (
     <section className="px-6 py-10" id="skills">
       <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: "all" }}
-          className="mb-8"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: amount }}
+        className="mb-8"
       >
         <Title level={2} className="text-center text-3xl font-bold">
           Skills & Proficiencies

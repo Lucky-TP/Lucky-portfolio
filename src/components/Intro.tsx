@@ -36,14 +36,14 @@ export default function Intro() {
               a Full-Stack Developer Interested in Technology, Finance, and Innovation
             </h1>
           </div>
-          <div className="flex flex-col items-center gap-4 sm:gap-6 sm:flex-row">
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-6">
             <a
               href="https://drive.google.com/file/d/1lkD47ieBg4C4KmkPOTDuj5CqSVYwdkHQ/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex w-fit items-center justify-center gap-2 rounded-full bg-gray-900 px-7 py-3 text-center text-white outline-none transition hover:scale-110 hover:bg-gray-950 focus:scale-110 active:scale-105"
             >
-              Resume / CV <FileText size={24}/>
+              Resume / CV <FileText size={24} />
             </a>
             <a
               href="https://www.linkedin.com/in/tunchanok-punmeros/"
