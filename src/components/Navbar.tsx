@@ -31,7 +31,7 @@ export default function Navbar() {
             Skills
           </Link>
         </div>
-        <button onClick={toggleMenu} className="block text-2xl focus:outline-none md:hidden">
+        <button onClick={toggleMenu} className="block text-2xl focus:outline-none md:hidden" aria-label="Section Menu">
           {isOpen ? <FiX /> : <FiMenu />}
         </button>
       </div>

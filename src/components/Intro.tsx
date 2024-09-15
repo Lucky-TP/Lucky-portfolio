@@ -20,7 +20,6 @@ export default function Intro() {
             height="480"
             alt="portrait"
             quality="100"
-            priority={true}
             className="rounded-full object-cover shadow-xl"
           />
         </motion.div>

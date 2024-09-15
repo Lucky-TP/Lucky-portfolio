@@ -64,14 +64,16 @@ export default function Projects() {
         {projects.map((project, index) => (
           <Timeline.Item key={index}>
             <h3 className="text-xl font-semibold">{project.title}</h3>
-            <a
-              href={project.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              className = "text-blue-400"
-            >
-              {project.website ? new URL(project.website).hostname : ""}
-            </a>
+            {project.website && (
+              <a
+                href={project.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className = "text-blue-400"
+              >
+                {project.website ? new URL(project.website).hostname : ""}
+              </a>
+            )}
             <div
               className={`mt-2 text-gray-700 ${screenWidth < 768 && (expandedIndex === index ? "" : "hidden")}`}
             >
