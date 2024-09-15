@@ -3,6 +3,7 @@
 import { Card, Col, Row, Typography, Badge, Space } from "antd";
 import { CalendarOutlined, FlagOutlined } from "@ant-design/icons";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const { Title, Text } = Typography;
 
@@ -33,13 +34,25 @@ const educationItems = [
 export default function Education() {
   return (
     <section className="px-6 py-10" id="education">
-      <Title level={2} className="mb-6 text-center">
-        Education
-      </Title>
+      <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: "all" }}
+      >
+        <Title level={2} className="mb-6 text-center">
+          Education
+        </Title>
+      </motion.div>
 
       <Row gutter={16} className="flex flex-wrap">
         {educationItems.map((item, index) => (
           <Col key={index} xs={24} sm={12} className="mb-4">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: "all" }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+            >
             <Card
               title={
                 <Space direction="vertical" className="w-full">
@@ -93,6 +106,7 @@ export default function Education() {
                 </Text>
               </div>
             </Card>
+            </motion.div>
           </Col>
         ))}
       </Row>

@@ -32,10 +32,10 @@ export default function Skills() {
   return (
     <section className="px-6 py-10" id="skills">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="mb-8"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: "all" }}
+          className="mb-8"
       >
         <Title level={2} className="text-center text-3xl font-bold">
           Skills & Proficiencies
@@ -47,8 +47,9 @@ export default function Skills() {
           <Col key={index} xs={24} sm={12} lg={6} className="mb-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
+              viewport={{ once: true, amount: "some" }}
             >
               <Card
                 title={

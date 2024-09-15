@@ -2,6 +2,7 @@
 import { Timeline, Typography } from "antd";
 import { useState } from "react";
 import { useScreenWidthSize } from "./hooks/useScreenWidthSize";
+import { motion } from "framer-motion";
 
 const { Title } = Typography;
 
@@ -59,38 +60,50 @@ export default function Projects() {
 
   return (
     <section className="container mx-auto px-6 py-10" id="projects">
-      <Title level={2} className="mb-6 text-center">Technical Projects / Experience</Title>
+      <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: "all" }}
+      >
+        <Title level={2} className="mb-6 text-center">Technical Projects / Experience</Title>
+      </motion.div>
       <Timeline mode="alternate">
         {projects.map((project, index) => (
           <Timeline.Item key={index}>
-            <h3 className="text-xl font-semibold">{project.title}</h3>
-            {project.website && (
-              <a
-                href={project.website}
-                target="_blank"
-                rel="noopener noreferrer"
-                className = "text-blue-400"
-              >
-                {project.website ? new URL(project.website).hostname : ""}
-              </a>
-            )}
-            <div
-              className={`mt-2 text-gray-700 ${screenWidth < 768 && (expandedIndex === index ? "" : "hidden")}`}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: "all" }}
             >
-              {project.description}
-            </div>
-            {screenWidth < 768 && (
-              <button
-                className="mt-2 text-blue-500"
-                onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+              <h3 className="text-xl font-semibold">{project.title}</h3>
+              {project.website && (
+                <a
+                  href={project.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className = "text-blue-500 font-bold"
+                >
+                  {project.website ? new URL(project.website).hostname : ""}
+                </a>
+              )}
+              <div
+                className={`mt-2 text-gray-700 ${screenWidth < 768 && (expandedIndex === index ? "" : "hidden")}`}
               >
-                {expandedIndex === index ? "Show Less" : "Show More"}
-              </button>
-            )}
-            <p className="mt-2 text-sm font-medium text-gray-500">
-              Technologies: {project.technologies.join(", ")}
-            </p>
-            <p className="mt-2 text-sm font-medium text-gray-500">Period: {project.period}</p>
+                {project.description}
+              </div>
+              {screenWidth < 768 && (
+                <button
+                  className="mt-2 text-blue-500"
+                  onClick={() => setExpandedIndex(expandedIndex === index ? null : index)}
+                >
+                  {expandedIndex === index ? "Show Less" : "Show More"}
+                </button>
+              )}
+              <p className="mt-2 text-sm font-medium text-gray-500">
+                Technologies: {project.technologies.join(", ")}
+              </p>
+              <p className="mt-2 text-sm font-medium text-gray-500">Period: {project.period}</p>
+            </motion.div>
           </Timeline.Item>
         ))}
       </Timeline>
