@@ -24,7 +24,7 @@ const educationItems = [
     icon: "/assets/KU_Logo.png",
     degree: "Undergraduate Student",
     period: "June 2022 - Present",
-    gpa: "3.42/4.00",
+    gpa: "3.52/4.00",
     location: "Bangkok, Thailand",
     description: `• Currently a third-year student studying Bachelor of Engineering in Computer Engineering.\n• Expected graduation in June 2026.\n• GPA: 3.42/4.00`,
     website: "https://www.ku.ac.th/th",
